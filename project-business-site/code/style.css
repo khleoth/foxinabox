@@ -1,0 +1,143 @@
+/* the + sign is used to select the sibling that comes immediately next to the element you selected.
+in this case it is the div with the answer class next to the div with the active class.
+this can be used for the FAQ-accordion. read more here: https://www.w3schools.com/css/css_combinators.asp */
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(67, 87, 59, 0.87);
+}
+
+header{
+  border: solid black;
+  position:relative;
+}
+
+.back-video{
+  width: 100%;
+  height: 50%;
+  display: block;
+  margin: auto;
+  z-index: -1;
+  
+}
+
+.title {
+  position:absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 30%;
+  left: 0px;
+  color:white;
+  font-size: 30px;
+  width: 95%;
+  text-align: center;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+main{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.form {
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 40px;
+  flex: 1 0 50%; /* makes the two flex items eqaul in size*/
+  background-image: url(./images/boxonground.jpeg);
+  font-weight: 900;
+}
+
+input{
+
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 10px;
+}
+
+.fox-breed{
+  color: rgb(146, 89, 45);
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+button{
+  color: rgb(146, 89, 45);
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 10px;
+  font-size: 14px;
+
+}
+
+.accordion{
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 40px;
+  flex: 1 0 50%;
+  background-image: url(./images/restingfox.jpeg);
+  font-weight: 900;
+}
+
+.question-hidden{
+  font-size: 26px;
+  padding: 10px;
+  margin: 5px;
+  
+}
+
+h2{
+  font-size: 50px;
+  text-align: center;
+ 
+}
+
+.answer {
+  display: none;
+  font-size: 20px;
+  margin-left:5px;
+}
+
+.mailbox {
+  display: block;
+  margin: auto;
+  z-index: -1;
+}
+
+.active + .answer {
+display: block;
+}
+
+@media (min-width:395px) and (max-width:767px){
+  .title{
+    font-size: 45px;
+    top: 35%;
+  }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+  .title{
+    font-size: 85px;
+    top: 30%;
+  }
+}
+
+@media (min-width:1024px){
+  .title{
+    font-size: 100px;
+    top: 38%;
+  }
+}
