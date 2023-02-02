@@ -30,10 +30,11 @@ header{
   left: 0px;
   color:white;
   font-size: 30px;
-  width: 95%;
+  width: 100%;
   text-align: center;
-  padding: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 main{
@@ -138,6 +139,8 @@ display: block;
 @media (min-width:1024px){
   .title{
     font-size: 100px;
-    top: 38%;
+    top: 32%;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
