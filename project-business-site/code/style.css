@@ -9,32 +9,41 @@ body{
   background-color: rgba(67, 87, 59, 0.87);
 }
 
-header{
+.title {
   border: solid black;
   position:relative;
 }
 
+.vidcontainer {
+  position: relative;
+  align-items: center;
+  z-index: -1;
+}
+
 .back-video{
   width: 100%;
-  height: 50%;
-  display: block;
-  margin: auto;
-  z-index: -1;
-  
+  height: auto; 
 }
 
 .title {
-  position:absolute;
+  position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  top: 30%;
-  left: 0px;
-  color:white;
-  font-size: 30px;
+  top: 30%; right: 0; bottom: 22%; left: 0;
   width: 100%;
   text-align: center;
   backdrop-filter: blur(15px);
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+.Logo {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  margin-bottom: 80%;
+  width: 100%;
+  text-align: center;
+  margin-top: 25%;
 }
 
 main{
@@ -123,24 +132,19 @@ display: block;
 }
 
 @media (min-width:395px) and (max-width:767px){
-  .title{
+  .Logo{
     font-size: 45px;
-    top: 35%;
   }
 }
 
 @media (min-width:768px) and (max-width:1023px){
-  .title{
+  .Logo{
     font-size: 85px;
-    top: 30%;
   }
 }
 
 @media (min-width:1024px){
-  .title{
+  .Logo{
     font-size: 100px;
-    top: 35%;
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 }
